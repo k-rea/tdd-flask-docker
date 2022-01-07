@@ -7,7 +7,7 @@ from src import app, db
 cli = FlaskGroup(app)
 
 
-@cli.commands('recreate_db')
+@cli.command('recreate_db')
 def recreate_db():
     db.drop_all()
     db.create_all()
